@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BEDHANEY MOBAIL HARDWARE AND SOFTWARE REPAIR</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800;900&family=Poppins:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins','Noto Sans Devanagari',Arial,sans-serif;background:#0a1428;color:#14233f;line-height:1.6}
+a{text-decoration:none;color:inherit}
+
+/* HEADER */
+header{
+ background:linear-gradient(90deg,#08101f,#14233f,#08101f);
+ padding:16px 7%;
+ display:flex;justify-content:space-between;align-items:center;
+ position:sticky;top:0;z-index:100;
+ border-bottom:2px solid #b8893a;
+ box-shadow:0 8px 28px rgba(0,0,0,.4);
+}
+.logo{font-family:'Playfair Display',Georgia,serif;font-size:22px;font-weight:800;color:#ffffff;letter-spacing:2px}
+.logo span{color:#e6c581}
+nav{display:flex;gap:26px}
+nav a{
+ font-size:12.5px;font-weight:600;color:#dbe3f0;
+ letter-spacing:1.5px;text-transform:uppercase;
+ border-bottom:2px solid transparent;padding-bottom:4px;transition:.3s;
+}
+nav a:hover{color:#e6c581;border-bottom-color:#e6c581}
+
+/* HERO */
+.hero{
+ min-height:640px;padding:80px 7%;
+ display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;
+ position:relative;overflow:hidden;
+ background-color:#0a1428;
+ background-image:
+  linear-gradient(90deg,rgba(10,20,40,.88),rgba(10,20,40,.62)),
+  url("IMG-20261108-WA0022.jpg");
+ background-size:cover;
+ background-position:center;
+ background-repeat:no-repeat;
+}
+.hero-content{position:relative;z-index:2}
+.tag{
+ display:inline-block;padding:9px 20px;border-radius:40px;
+ background:rgba(230,197,129,.12);border:1px solid #e6c581;
+ color:#e6c581;font-size:11px;font-weight:700;letter-spacing:2.5px;
+}
+h1{
+ font-family:'Playfair Display',Georgia,serif;
+ font-size:clamp(38px,5.6vw,70px);
+ line-height:1.12;margin:26px 0;font-weight:800;letter-spacing:-1px;
+}
+h1 .line1{display:block;color:#ffffff}
+h1 .line2{display:block;font-style:italic;color:#e6c581}
+.hero p{
+ color:#f1f4f9;line-height:2;font-size:15px;
+ max-width:540px;font-weight:500;
+}
+.hero p b{color:#e6c581;font-weight:700}
+.hero-buttons{display:flex;gap:14px;flex-wrap:wrap}
+
+/* PREMIUM BUTTONS */
+.btn{
+ position:relative;overflow:hidden;
+ display:inline-block;margin-top:28px;padding:16px 32px;border-radius:50px;
+ background:linear-gradient(135deg,#f6dc9b,#d4a548 50%,#a77a2a);
+ color:#14233f;font-weight:700;font-size:12.5px;letter-spacing:1.8px;
+ border:1px solid #f6dc9b;
+ box-shadow:0 12px 30px rgba(184,137,58,.45),inset 0 1px 0 rgba(255,255,255,.5);
+ transition:.35s;
+}
+.btn:before{
+ content:"";position:absolute;top:0;left:-80%;width:50%;height:100%;
+ background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);
+ transform:skewX(-20deg);transition:.7s;
+}
+.btn:hover:before{left:130%}
+.btn:hover{transform:translateY(-4px);box-shadow:0 18px 38px rgba(184,137,58,.6)}
+.btn2{
+ background:rgba(255,255,255,.06);color:#e6c581;
+ border:1.5px solid #e6c581;box-shadow:none;
+}
+.btn2:hover{background:linear-gradient(135deg,#f6dc9b,#d4a548);color:#14233f;box-shadow:0 14px 30px rgba(184,137,58,.5)}
+
+.hero-image{position:relative;z-index:2}
+.hero-image img{
+ display:block;width:100%;height:370px;object-fit:cover;
+ border-radius:26px;border:3px solid #e6c581;
+ box-shadow:0 25px 55px rgba(0,0,0,.55),0 0 0 8px rgba(230,197,129,.15);
+}
+.hero-label{
+ position:absolute;bottom:-16px;left:24px;
+ background:linear-gradient(135deg,#f6dc9b,#c99a43);color:#14233f;padding:12px 22px;
+ border-radius:30px;font-size:12px;font-weight:700;letter-spacing:.8px;
+ box-shadow:0 10px 24px rgba(0,0,0,.4);
+}
+
+/* SECTION HEADINGS */
+section{padding:95px 7%}
+.heading{text-align:center;margin-bottom:58px}
+.heading small{
+ display:block;color:#a77a2a;font-size:12px;font-weight:700;
+ letter-spacing:5px;text-transform:uppercase;margin-bottom:12px;
+}
+.heading h2{
+ font-family:'Playfair Display',Georgia,serif;font-size:42px;font-weight:800;
+ color:#14233f;letter-spacing:-.5px;
+}
+.heading h2 span{color:#a77a2a;font-style:italic}
+.heading:after{
+ content:"◆";display:block;margin-top:16px;
+ color:#b8893a;font-size:12px;letter-spacing:10px;
+}
+.heading p{color:#46566e;margin-top:14px;font-size:14.5px;font-weight:500}
+
+/* SERVICES */
+#services{
+ background:
+  radial-gradient(circle at 12% 15%,rgba(255,255,255,.7) 0,transparent 35%),
+  linear-gradient(160deg,#f1e3c3,#e6d1a1 55%,#efdfb9);
+}
+.services{
+ display:grid;grid-template-columns:repeat(3,1fr);gap:18px;
+ max-width:860px;margin:auto;
+}
+.service{
+ position:relative;overflow:hidden;
+ padding:22px 16px 20px;min-height:auto;
+ background:linear-gradient(160deg,#18294a,#0c172e);
+ border:1px solid #c99a43;border-radius:16px;
+ box-shadow:0 10px 24px rgba(20,35,63,.3);
+ transition:.4s;text-align:center;
+}
+.service:before{
+ content:"";position:absolute;top:0;left:0;width:100%;height:3px;
+ background:linear-gradient(90deg,#a77a2a,#f6dc9b,#a77a2a);
+}
+.service .num{
+ position:absolute;top:8px;right:12px;
+ font-family:'Playfair Display',Georgia,serif;
+ font-size:18px;font-weight:800;color:rgba(230,197,129,.3);
+}
+.service:hover{transform:translateY(-6px);border-color:#f6dc9b}
+.service-icon{
+ width:48px;height:48px;display:grid;place-items:center;margin:0 auto 12px;
+ border-radius:50%;
+ background:linear-gradient(135deg,#f6dc9b,#c99a43);
+ font-size:21px;
+ box-shadow:0 6px 14px rgba(0,0,0,.35);
+}
+.service h3{
+ font-family:'Playfair Display',Georgia,serif;font-size:16px;
+ color:#ffffff;margin-bottom:4px;font-weight:700;
+}
+.service .line{
+ width:30px;height:2px;margin:7px auto 9px;border-radius:3px;
+ background:linear-gradient(90deg,#a77a2a,#f6dc9b);
+}
+.service p{color:#dbe3f0;font-size:12.5px;line-height:1.7}
+
+/* PRODUCTS */
+#products{
+ background:
+  radial-gradient(circle at 85% 10%,rgba(184,137,58,.25) 0,transparent 35%),
+  linear-gradient(160deg,#14233f,#0a1428);
+}
+#products .heading h2{color:#ffffff}
+#products .heading h2 span{color:#e6c581}
+#products .heading small{color:#e6c581}
+#products .heading p{color:#d5deec}
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.product{
+ position:relative;background:linear-gradient(180deg,#fffaf0,#f3e6c8);
+ border-radius:20px;overflow:hidden;
+ box-shadow:0 14px 34px rgba(0,0,0,.45);transition:.4s;
+ border:1px solid #e6c581;
+ display:flex;flex-direction:column;
+}
+.product:hover{transform:translateY(-8px);box-shadow:0 26px 52px rgba(0,0,0,.6)}
+.img-wrap{
+ position:relative;overflow:hidden;height:210px;
+ background:radial-gradient(circle at 50% 35%,#ffffff 0,#e3e8ef 65%,#c3ccd7 100%);
+}
+.img-wrap svg{
+ position:absolute;inset:0;width:100%;height:100%;
+ transition:.5s;
+}
+.product:hover .img-wrap svg{transform:scale(1.08)}
+.img-wrap img{
+ position:absolute;inset:0;width:100%;height:100%;
+ object-fit:cover;transition:.6s;
+}
+.product:hover .img-wrap img{transform:scale(1.08)}
+.badge{
+ position:absolute;top:12px;left:12px;z-index:2;
+ background:linear-gradient(135deg,#14233f,#2a4272);color:#e6c581;
+ border:1px solid #e6c581;
+ padding:5px 13px;border-radius:30px;
+ font-size:10px;font-weight:700;letter-spacing:1.3px;
+}
+.info{padding:18px;border-top:4px solid #b8893a;display:flex;flex-direction:column;flex:1}
+.info small{
+ color:#a77a2a;font-size:10.5px;font-weight:700;
+ letter-spacing:2px;text-transform:uppercase;margin-bottom:3px;
+}
+.info h3{font-family:'Playfair Display',Georgia,serif;font-size:17.5px;color:#14233f;margin:0 0 3px;font-weight:700;line-height:1.3}
+.info p{color:#46566e;font-size:12.5px;font-weight:500}
+.info strong{
+ display:block;color:#8a5f12;margin:10px 0 12px;
+ font-size:12px;font-weight:700;letter-spacing:.4px;
+}
+.smallbtn{
+ display:inline-block;align-self:flex-start;margin-top:auto;
+ padding:10px 22px;border-radius:40px;
+ background:linear-gradient(135deg,#1c2f55,#0c172e);color:#e6c581;
+ border:1px solid #c99a43;
+ font-size:11px;font-weight:700;letter-spacing:1.1px;transition:.35s;
+ box-shadow:0 8px 18px rgba(20,35,63,.35);
+}
+.smallbtn:hover{
+ background:linear-gradient(135deg,#f6dc9b,#c99a43);color:#14233f;
+ transform:translateY(-3px);box-shadow:0 12px 24px rgba(184,137,58,.5);
+}
+
+/* GALLERY */
+#gallery{
+ background:
+  radial-gradient(circle at 90% 90%,rgba(255,255,255,.6) 0,transparent 35%),
+  linear-gradient(160deg,#efdfb9,#e6d1a1 55%,#f1e3c3);
+}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.frame{
+ position:relative;overflow:hidden;border-radius:24px;
+ border:3px solid #b8893a;
+ box-shadow:0 18px 42px rgba(20,35,63,.3);
+}
+.frame img{
+ display:block;width:100%;height:310px;object-fit:cover;transition:.6s;
+}
+.frame:hover img{transform:scale(1.08)}
+.frame span{
+ position:absolute;left:0;right:0;bottom:0;
+ padding:40px 20px 18px;
+ background:linear-gradient(0deg,rgba(10,20,40,.95),transparent);
+ color:#ffffff;font-family:'Playfair Display',Georgia,serif;
+ font-size:18px;font-weight:700;letter-spacing:.5px;
+}
+.frame span:before{
+ content:"";display:block;width:38px;height:3px;
+ background:#e6c581;margin-bottom:8px;border-radius:3px;
+}
+
+/* CONTACT */
+.contact{
+ background:
+  radial-gradient(circle at 15% 20%,rgba(184,137,58,.28) 0,transparent 35%),
+  linear-gradient(160deg,#14233f,#08101f);
+}
+.contact .heading h2{color:#ffffff}
+.contact .heading h2 span{color:#e6c581}
+.contact .heading small{color:#e6c581}
+.contact .heading p{color:#d5deec}
+.numbers{
+ max-width:920px;margin:auto;
+ display:grid;grid-template-columns:1fr 1fr;gap:20px;
+}
+.number{
+ background:linear-gradient(135deg,rgba(255,255,255,.1),rgba(255,255,255,.04));
+ border:1px solid #c99a43;
+ border-radius:18px;padding:20px 24px;
+ display:flex;justify-content:center;align-items:center;
+ box-shadow:0 12px 30px rgba(0,0,0,.35);transition:.35s;
+}
+.number:hover{transform:translateY(-5px);border-color:#f6dc9b;background:rgba(255,255,255,.14)}
+
+/* HIDE PHONE NUMBERS - SHOW ONLY WHATSAPP BUTTON */
+.number strong{
+ display:none;
+}
+.number span{
+ display:inline-block;
+ min-width:150px;
+ text-align:center;
+ background:linear-gradient(135deg,#25d27a,#12985a);
+ color:#ffffff;
+ padding:12px 25px;
+ border-radius:30px;
+ font-size:13px;
+ font-weight:700;
+ letter-spacing:.6px;
+ box-shadow:0 8px 18px rgba(18,152,90,.45);
+ transition:.3s;
+}
+.number:hover span{
+ transform:scale(1.05);
+}
+
+.address{
+ max-width:430px;margin:42px auto 0;text-align:center;
+ padding:16px 26px;border-radius:50px;
+ background:linear-gradient(135deg,#f6dc9b,#c99a43);
+ color:#14233f;font-weight:700;
+ box-shadow:0 12px 28px rgba(0,0,0,.35);
+}
+
+/* FOOTER */
+footer{
+ text-align:center;padding:34px 20px;background:#050b17;
+ color:#c9d3e3;font-size:12.5px;letter-spacing:1.2px;
+ border-top:3px solid #b8893a;
+}
+footer .brand{
+ font-family:'Playfair Display',Georgia,serif;
+ font-size:21px;color:#ffffff;font-weight:800;letter-spacing:3px;margin-bottom:8px;
+}
+footer .brand span{color:#e6c581}
+footer b{color:#e6c581;font-weight:600}
+
+/* TABLET */
+@media(max-width:1000px){
+ .products{grid-template-columns:repeat(3,1fr);gap:16px}
+}
+
+/* MOBILE */
+@media(max-width:750px){
+ header{padding:14px 4%;flex-wrap:wrap;gap:10px;justify-content:center}
+ .logo{font-size:17px}
+ nav{gap:14px}
+ nav a{font-size:10.5px;letter-spacing:1px}
+ .hero{grid-template-columns:1fr;padding:55px 6% 65px;gap:36px;min-height:auto}
+ .hero-image img{height:260px}
+ .btn{padding:14px 24px;font-size:11.5px}
+ section{padding:64px 5%}
+ .heading h2{font-size:29px}
+ .services{grid-template-columns:1fr;gap:12px;max-width:300px}
+ .service{padding:18px 14px 16px}
+ .products{grid-template-columns:repeat(2,1fr);gap:11px}
+ .product{border-radius:14px}
+ .img-wrap{height:135px}
+ .badge{font-size:8px;padding:3px 8px;top:7px;left:7px}
+ .info{padding:11px}
+ .info small{font-size:8.5px;letter-spacing:1px}
+ .info h3{font-size:13px}
+ .info p{font-size:10px}
+ .info strong{font-size:10px;margin:7px 0 9px}
+ .smallbtn{font-size:9.5px;padding:8px 13px}
+ .gallery{grid-template-columns:1fr 1fr;gap:10px}
+ .frame{border-width:2px;border-radius:16px}
+ .frame img{height:165px}
+ .frame span{font-size:12px;padding:24px 10px 10px}
+ .numbers{grid-template-columns:1fr}
+ .number{padding:16px 18px}
+}
+</style>
+</head>
+
+<body>
+
+<!-- Shared colors for product drawings -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+ <defs>
+  <linearGradient id="gMetal" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f7f9fb"/><stop offset="1" stop-color="#9aa5b1"/></linearGradient>
+  <linearGradient id="gDark" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4a5163"/><stop offset="1" stop-color="#0d1017"/></linearGradient>
+  <linearGradient id="gWhite" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#d3d9e1"/></linearGradient>
+  <linearGradient id="gBlue" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6aaeff"/><stop offset="1" stop-color="#1b4fae"/></linearGradient>
+  <linearGradient id="gRed" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff7b6b"/><stop offset="1" stop-color="#a81c16"/></linearGradient>
+  <linearGradient id="gGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f6dc9b"/><stop offset="1" stop-color="#a77a2a"/></linearGradient>
+  <linearGradient id="gScreen" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1e4468"/><stop offset="1" stop-color="#050f1c"/></linearGradient>
+  <linearGradient id="gWall" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1f6fff"/><stop offset=".55" stop-color="#8a3dff"/><stop offset="1" stop-color="#ff5aa0"/></linearGradient>
+ </defs>
+</svg>
+
+<header>
+ <div class="logo">BEDHANEY <span>MOBAIL HARDWARE AND SOFTWARE REPAIR</span></div>
+ <nav>
+  <a href="#home">Home</a>
+  <a href="#services">Services</a>
+  <a href="#products">Products</a>
+  <a href="#contact">Contact</a>
+ </nav>
+</header>
+
+<section class="hero" id="home">
+ <div class="hero-content">
+  <div class="tag">✦ MOBILE • ELECTRONICS • REPAIRING</div>
+  <h1>
+   <span class="line1">Bedhaney Mobail</span>
+   <span class="line2">Hardware & Software Repair</span>
+  </h1>
+  <p>
+   <b>Bedhaney mobail hardware and software repair and all mobail accessories sell new and old mobail and net cafe</b>
+  </p>
+  <div class="hero-buttons">
+   <a class="btn" href="#contact">CONTACT US ↗</a>
+   <a class="btn btn2" href="#products">EXPLORE PRODUCTS →</a>
+  </div>
+ </div>
+
+ <div class="hero-image">
+  <img src="IMG-20261108-WA0022.jpg" alt="Mobile Repairing Microscope">
+  <div class="hero-label">🛠️ Professional Mobile Repairing</div>
+ </div>
+</section>
+
+<section id="services">
+ <div class="heading">
+  <small>What We Do</small>
+  <h2>Our <span>Services</span></h2>
+  <p>आपकी जरूरतों के लिए बेहतर सुविधाएँ और भरोसेमंद सेवा</p>
+ </div>
+ <div class="services">
+  <div class="service">
+   <div class="num">01</div>
+   <div class="service-icon">🛠️</div>
+   <h3>Mobile Repairing</h3>
+   <div class="line"></div>
+   <p>Mobile Hardware & Software Repairing की सुविधा।</p>
+  </div>
+  <div class="service">
+   <div class="num">02</div>
+   <div class="service-icon">🎧</div>
+   <h3>Mobile Accessories</h3>
+   <div class="line"></div>
+   <p>मोबाइल एक्सेसरीज़ और उपयोगी गैजेट्स की रेंज।</p>
+  </div>
+  <div class="service">
+   <div class="num">03</div>
+   <div class="service-icon">🔌</div>
+   <h3>Electronics Products</h3>
+   <div class="line"></div>
+   <p>अलग-अलग इलेक्ट्रॉनिक्स प्रोडक्ट और एक्सेसरीज़।</p>
+  </div>
+ </div>
+</section>
+
+<section id="products">
+ <div class="heading">
+  <small>Our Collection</small>
+  <h2>Explore <span>Our Products</span></h2>
+  <p>मोबाइल और इलेक्ट्रॉनिक्स के सभी प्रोडक्ट एक जगह</p>
+ </div>
+ <div class="products">
+
+  <!-- ORIGINAL PRODUCTS -->
+
+  <div class="product">
+   <div class="img-wrap"><div class="badge">AVAILABLE</div><img src="IMG-20261108-WA0015.jpg" alt="Bike Phone Holder" onerror="this.remove()"></div>
+   <div class="info">
+    <small>Holder</small>
+    <h3>Bike Phone Holder</h3>
+    <p>XY-088 Mobile Holder</p>
+    <strong>Price: WhatsApp पर पूछें</strong>
+    <a class="smallbtn" href="https://wa.me/918679474624?text=Bike%20Phone%20Holder%20ki%20price%20bataye" target="_blank">Enquire Now ↗</a>
+   </div>
+  </div>
+
+  <div class="product">
+   <div class="img-wrap"><div class="badge">AVAILABLE</div><img src="IMG-20261108-WA0005.jpg" alt="CLIPPRO Earphones" onerror="this.remove()"></div>
+   <div class="info">
+    <small>Audio</small>
+    <h3>CLIPPRO 40 Earphones</h3>
+    <p>Audio Accessories</p>
+    <strong>Price: WhatsApp पर पूछें</strong>
+    <a class="smallbtn" href="https://wa.me/918679474624?text=CLIPPRO%2040%20Earphones%20ki%20price%20bataye" target="_blank">Enquire Now ↗</a>
+   </div>
+  </div>
+
+  <div class="product">
+   <div class="img-wrap"><div class="badge">AVAILABLE</div><img src="IMG-20261108-WA0026.jpg" alt="SUP Game Box" onerror="this.remove()"></div>
+   <div class="info">
+    <small>Gaming</small>
+    <h3>SUP Game Box</h3>
+    <p>400-in-1 Plus Gaming</p>
+    <strong>Price: WhatsApp पर पूछें</strong>
+    <a class="smallbtn" href="https://wa.me/918679474624?text=SUP%20Game%20Box%20ki%20price%20bataye" target="_blank">Enquire Now ↗</a>
+   </div>
+  </div>
+
+  <div class="product">
+   <div class="img-wrap"><div class="badge">AVAILABLE</div><img src="IMG-20261108-WA0022.jpg" alt="Repairing Microscope" onerror="this.remove()"></div>
+   <div class="info">
+    <small>Repair Tools</small>
+    <h3>Repairing Microscope</h3>
+    <p>Mobile Repairing Equipment</p>
+    <strong>Details: WhatsApp पर पूछें</strong>
+    <a class="smallbtn" href="https://wa.me/918679474624?text=Repairing%20Microscope%20ki%20details%20bataye" target="_blank">Enquire Now ↗</a>
+   </div>
+  </div>
+
+  <div class="product">
+   <div class="img-wrap"><div class="badge">AVAILABLE</div><img src="IMG-20261108-WA0029.jpg" alt="Speakers and Audio" onerror="this.remove()"></div>
+   <div class="info">
+    <small>Audio</small>
+    <h3>Speakers & Audio</h3>
+    <p>Audio Electronics</p>
+    <strong>Price: WhatsApp पर पूछें</strong>
+    <a class="smallbtn" href="https://wa.me/918679474624?text=Speaker%20ki%20price%20bataye" target="_blank">Enquire Now ↗</a>
+   </div>
+  </div>
+
+  <div class="product">
+   <div class="img-wrap"><div class="badge">AVAILABLE</div><img src="IMG-20261108-WA0032.jpg" alt="Mobile Accessories" onerror="this.remove()"></div>
+   <div class="info">
+    <small>Accessories</small>
+    <h3>Mobile Accessories</h3>
+    <p>Shop Accessories Collection</p>
+    <strong>Price: WhatsApp पर पूछें</strong>
+    <a class="smallbtn" href="https://wa.me/918679474624?text=Mobile%20Accessories%20ki%20details%20bataye" target="_blank">Enquire Now ↗</a>
+   </div>
+  </div>
+
+  <!-- FAST CHARGER -->
+  <div class="product">
+   <div class="img-wrap"><div class="badge">AVAILABLE</div>
+    <svg viewBox="0 0 200 160" role="img" aria-label="Fast Charger">
+     <ellipse cx="100" cy="144" rx="50" ry="6" fill="#000" opacity=".25"/>
+     <rect x="82" y="16" width="8" height="26" rx="2" fill="url(#gMetal)"/>
+     <rect x="110" y="16" width="8" height="26" rx="2" fill="url(#gMetal)"/>
+     <rect x="62" y="40" width="76" height="92" rx="12" fill="url(#gWhite)" stroke="#c4cbd4"/>
+     <rect x="66" y="43" width="68" height="12" rx="6" fill="#fff" opacity=".7"/>
+     <rect x="86" y="104" width="28" height="10" rx="3" fill="#1b1f27"/>
+     <rect x="90" y="107" width="20" height="4" fill="#6b7686"/>
+     <text x="100" y="84" text-anchor="middle" font-size="13" font-weight="700" fill="#5a6678" font-family="Poppins,Arial">20W</text>
+    </svg>
+   </div>
+   <div class="info">
+    <small>Charging</small><h3>Fast Charger</h3><p>Mobile Adapter</p>
+    <strong>Price: WhatsApp पर पूछें</strong>
+    <a class="smallbtn" href="https://wa.me/918679474624?text=Fast%20Charger%20ki%20price%20bataye" target="_blank">Enquire Now ↗</a>
+   </div>
+  </div>
+
+  <!-- DATA CABLE -->
+  <div class="product">
+   <div class="img-wrap"><div class="badge">AVAILABLE</div>
+    <svg viewBox="0 0 200 160" role="img" aria-label="Data Cable">
+     <ellipse cx="100" cy="146" rx="62" ry="6" fill="#000" opacity=".22"/>
+     <path d="M44 118 C26 50 100 36 100 84 S168 130 156 50" fill="none" stroke="#161a22" stroke-width="8" stroke-linecap="round"/>
+     <path d="M44 118 C26 50 100 36 100 84 S168 130 156 50" fill="none" stroke="#5b6577" stroke-width="2" stroke-linecap="round" opacity=".6"/>
+     <rect x="34" y="116" width="22" height="26" rx="5" fill="url(#gDark)"/>
+     <rect x="38" y="138" width="14" height="14" rx="2" fill="url(#gMetal)"/>
+     <rect x="145" y="26" width="22" height="26" rx="5" fill="url(#gDark)"/>
+     <rect x="149" y="12" width="14" height="16" rx="2" fill="url(#gMetal)"/>
+    </svg>
+   </div>
+   <div class="info">
+    <small>Charging</small><h3>Data Cable</h3><p>Type-C / V8 / iPhone</p>
+    <strong>Price: WhatsApp पर पूछें</strong>
+    <a class="smallbtn" href="https://wa.me/918679474624?text=Data%20Cable%20ki%20price%20bataye" target="_blank">Enquire Now ↗</a>
+   </div>
+  </div>
+
+  <!-- POWER BANK -->
+  <div class="product">
+   <div class="img-wrap"><div class="badge">AVAILABLE</div>
+    <svg viewBox="0 0 200 160" role="img" aria-label="Power Bank">
+     <ellipse cx="100" cy="146" rx="42" ry="6" fill="#000" opacity=".25"/>
+     <rect x="66" y="12" width="68" height="130" rx="12" fill="url(#gDark)"/>
+     <rect x="70" y="18" width="8" height="118" rx="4" fill="#fff" opacity=".13"/>
+     <rect x="82" y="24" width="36" height="14" rx="3" fill="#07090d"/>
+     <circle cx="82" cy="56" r="3" fill="#4cff9b"/><circle cx="94" cy="56" r="3" fill="#4cff9b"/>
+     <circle cx="106" cy="56" r="3" fill="#4cff9b"/><circle cx="118" cy="56" r="3" fill="#3a4150"/>
+     <text x="100" y="94" text-anchor="middle" font-size="13" font-weight="700" fill="#e6c581" font-family="Poppins,Arial">10000</text>
+     <text x="100" y="108" text-anchor="middle" font-size="8" fill="#c9d3e3" font-family="Poppins,Arial">mAh</text>
+    </svg>
+   </div>
+   <div class="info">
+    <small>Charging</small><h3>Power Bank</h3><p>10000 / 20000 mAh</p>
+    <strong>Price: WhatsApp पर पूछें</strong>
+    <a class="smallbtn" href="https://wa.me/918679474624?text=Power%20Bank%20ki%20price%20bataye" target="_blank">Enquire Now ↗</a>
+   </div>
+  </div>
+
+  <!-- BLUETOOTH EARBUDS -->
+  <div class="product">
+   <div class="img-wrap"><div class="badge">AVAILABLE</div>
+    <svg viewBox="0 0 200 160" role="img" aria-label="Bluetooth Earbuds">
+     <ellipse cx="100" cy="146" rx="70" ry="6" fill="#000" opacity=".22"/>
+     <rect x="30" y="64" width="86" height="66" rx="32" fill="url(#gWhite)" stroke="#c4cbd4"/>
+     <path d="M32 94 H114" stroke="#b8c0ca" stroke-width="2"/>
+     <circle cx="73" cy="112" r="4" fill="#4cd68a"/>
+     <g transform="translate(138 36) rotate(14)"><rect x="-4" y="8" width="9" height="42" rx="4.5" fill="url(#gWhite)" stroke="#c4cbd4"/><ellipse cx="0" cy="0" rx="14" ry="16" fill="url(#gWhite)" stroke="#c4cbd4"/><circle cx="-3" cy="-3" r="4" fill="#fff" opacity=".8"/></g>
+     <g transform="translate(168 62) rotate(14)"><rect x="-4" y="8" width="9" height="42" rx="4.5" fill="url(#gWhite)" stroke="#c4cbd4"/><ellipse cx="0" cy="0" rx="14" ry="16" fill="url(#gWhite)" stroke="#c4cbd4"/><circle cx="-3" cy="-3" r="4" fill="#fff" opacity=".8"/></g>
+    </svg>
+   </div>
+   <div class="info">
+    <small>Audio</small><h3>Bluetooth Earbuds</h3><p>TWS Wireless Earbuds</p>
+    <strong>Price: WhatsApp पर पूछें</strong>
+    <a class="smallbtn" href="https://wa.me/918679474624?text=Bluetooth%20Earbuds%20ki%20price%20bataye" target="_blank">Enquire Now ↗</a>
+   </div>
+  </div>
+
+  <!-- BLUETOOTH NECKBAND -->
+  <div class="product">
+   <div class="img-wrap"><div class="badge">AVAILABLE</div>
+    <svg viewBox="0 0 200 160" role="img" aria-label="Bluetooth Neckband">
+     <ellipse cx="100" cy="148" rx="60" ry="5" fill="#000" opacity=".2"/>
+     <path d="M46 38 C40 150 160 150 154 38" fill="none" stroke="#10131a" stroke-width="12" stroke-linecap="round"/>
+     <path d="M46 38 C40 150 160 150 154 38" fill="none" stroke="#5b6577" stroke-width="2" opacity=".6"/>
+     <rect x="38" y="30" width="18" height="30" rx="8" fill="url(#gRed)"/>
+     <rect x="144" y="30" width="18" height="30" rx="8" fill="url(#gRed)"/>
+     <circle cx="47" cy="22" r="10" fill="url(#gDark)"/><circle cx="153" cy="22" r="10" fill="url(#gDark)"/>
+     <circle cx="100" cy="132" r="5" fill="#4cff9b"/>
+    </svg>
+   </div>
+   <div class="info">
+    <small>Audio</small><h3>Bluetooth Neckband</h3><p>Wireless Neckband</p>
+    <strong>Price: WhatsApp पर पूछें</strong>
+    <a class="smallbtn" href="https://wa.me/918679474624?text=Bluetooth%20Neckband%20ki%20price%20bataye" target="_blank">Enquire Now ↗</a>
+   </div>
+  </div>
+
+  <!-- SMART WATCH -->
+  <div class="product">
+   <div class="img-wrap"><div class="badge">AVAILABLE</div>
+    <svg viewBox="0 0 200 160" role="img" aria-label="Smart Watch">
+     <ellipse cx="100" cy="150" rx="40" ry="5" fill="#000" opacity=".22"/>
+     <rect x="80" y="4" width="40" height="50" rx="8" fill="url(#gDark)"/>
+     <rect x="80" y="106" width="40" height="50" rx="8" fill="url(#gDark)"/>
+     <rect x="62" y="40" width="76" height="80" rx="20" fill="url(#gMetal)" stroke="#8b96a3"/>
+     <rect x="68" y="46" width="64" height="68" rx="15" fill="url(#gScreen)"/>
+     <path d="M72 52 L104 52 L72 90Z" fill="#fff" opacity=".12"/>
+     <text x="100" y="86" text-anchor="middle" font-size="18" font-weight="700" fill="#ffffff" font-family="Poppins,Arial">10:09</text>
+     <rect x="76" y="96" width="48" height="4" rx="2" fill="#4cd68a"/>
+     <rect x="138" y="68" width="6" height="16" rx="3" fill="url(#gGold)"/>
+    </svg>
+   </div>
+   <div class="info">
+    <small>Wearable</small><h3>Smart Watch</h3><p>Fitness & Calling Watch</p>
+    <strong>Price: WhatsApp पर पूछें</strong>
+    <a class="smallbtn" href="https://wa.me/918679474624?text=Smart%20Watch%20ki%20price%20bataye" target="_blank">Enquire Now ↗</a>
+   </div>
+  </div>
+
+  <!-- TEMPERED GLASS -->
+  <div class="product">
+   <div class="img-wrap"><div class="badge">AVAILABLE</div>
+    <svg viewBox="0 0 200 160" role="img" aria-label="Tempered Glass">
+     <ellipse cx="100" cy="148" rx="44" ry="5" fill="#000" opacity=".22"/>
+     <rect x="58" y="12" width="84" height="134" rx="14" fill="#0b0e14" stroke="#9fb3c8" stroke-width="3"/>
+     <rect x="64" y="20" width="72" height="118" rx="9" fill="url(#gScreen)"/>
+     <path d="M66 22 L112 22 L66 98Z" fill="#fff" opacity=".28"/>
+     <path d="M134 80 L134 136 L90 136Z" fill="#fff" opacity=".1"/>
+     <rect x="90" y="23" width="20" height="5" rx="2.5" fill="#0b0e14"/>
+     <text x="100" y="86" text-anchor="middle" font-size="20" font-weight="800" fill="#e6c581" font-family="Poppins,Arial">9H</text>
+    </svg>
+   </div>
+   <div class="info">
+    <small>Protection</small><h3>Tempered Glass</h3><p>All Mobile Models</p>
+    <strong>Price: WhatsApp पर पूछें</strong>
+    <a class="smallbtn" href="https://wa.me/918679474624?text=Tempered%20Glass%20ki%20price%20bataye" target="_blank">Enquire Now ↗</a>
+   </div>
+  </div>
+
+  <!-- MOBILE BACK COVER -->
+  <div class="product">
+   <div class="img-wrap"><div class="badge">AVAILABLE</div>
+    <svg viewBox="0 0 200 160" role="img" aria-label="Mobile Back Cover">
+     <ellipse cx="100" cy="148" rx="44" ry="5" fill="#000" opacity=".22"/>
+     <rect x="58" y="12" width="84" height="134" rx="18" fill="url(#gBlue)"/>
+     <rect x="64" y="12" width="10" height="134" rx="5" fill="#fff" opacity=".18"/>
+     <rect x="68" y="20" width="38" height="40" rx="10" fill="url(#gDark)"/>
+     <circle cx="80" cy="34" r="8" fill="#0a0c10" stroke="#8b96a3" stroke-width="2"/>
+     <circle cx="80" cy="50" r="8" fill="#0a0c10" stroke="#8b96a3" stroke-width="2"/>
+     <circle cx="96" cy="42" r="4" fill="#ffe9a8"/>
+     <circle cx="100" cy="100" r="14" fill="none" stroke="#fff" stroke-width="3" opacity=".55"/>
+    </svg>
+   </div>
+   <div class="info">
+    <small>Protection</small><h3>Mobile Back Cover</h3><p>Designer & Silicone Covers</p>
+    <strong>Price: WhatsApp पर पूछें</strong>
+    <a class="smallbtn" href="https://wa.me/918679474624?text=Mobile%20Back%20Cover%20ki%20price%20bataye" target="_blank">Enquire Now ↗</a>
+   </div>
+  </div>
+
+  <!-- MEMORY CARD -->
+  <div class="product">
+   <div class="img-wrap"><div class="badge">AVAILABLE</div>
+    <svg viewBox="0 0 200 160" role="img" aria-label="Memory Card">
+     <ellipse cx="100" cy="148" rx="46" ry="5" fill="#000" opacity=".22"/>
+     <path d="M62 14 H122 L144 36 V142 H62Z" fill="url(#gDark)" stroke="#0a0c10"/>
+     <rect x="70" y="56" width="66" height="56" rx="5" fill="url(#gRed)"/>
+     <text x="103" y="82" text-anchor="middle" font-size="13" font-weight="800" fill="#fff" font-family="Poppins,Arial">SD</text>
+     <text x="103" y="100" text-anchor="middle" font-size="12" font-weight="700" fill="#fff" font-family="Poppins,Arial">64GB</text>
+     <rect x="70" y="120" width="7" height="18" fill="url(#gGold)"/><rect x="81" y="120" width="7" height="18" fill="url(#gGold)"/>
+     <rect x="92" y="120" width="7" height="18" fill="url(#gGold)"/><rect x="103" y="120" width="7" height="18" fill="url(#gGold)"/>
+     <rect x="114" y="120" width="7" height="18" fill="url(#gGold)"/><rect x="125" y="120" width="7" height="18" fill="url(#gGold)"/>
+     <rect x="136" y="44" width="4" height="12" rx="2" fill="#fff" opacity=".4"/>
+    </svg>
+   </div>
+   <div class="info">
+    <small>Storage</small><h3>Memory Card</h3><p>16GB / 32GB / 64GB / 128GB</p>
+    <strong>Price: WhatsApp पर पूछें</strong>
+    <a class="smallbtn" href="https://wa.me/918679474624?text=Memory%20Card%20ki%20price%20bataye" target="_blank">Enquire Now ↗</a>
+   </div>
+  </div>
+
+  <!-- PEN DRIVE -->
+  <div class="product">
+   <div class="img-wrap"><div class="badge">AVAILABLE</div>
+    <svg viewBox="0 0 200 160" role="img" aria-label="Pen Drive">
+     <ellipse cx="100" cy="124" rx="76" ry="6" fill="#000" opacity=".22"/>
+     <rect x="24" y="64" width="46" height="32" rx="3" fill="url(#gMetal)" stroke="#8b96a3"/>
+     <rect x="34" y="74" width="8" height="12" fill="#1b1f27"/><rect x="50" y="74" width="8" height="12" fill="#1b1f27"/>
+     <rect x="68" y="56" width="102" height="48" rx="12" fill="url(#gDark)"/>
+     <rect x="68" y="56" width="102" height="14" rx="8" fill="#fff" opacity=".12"/>
+     <rect x="68" y="86" width="102" height="8" fill="url(#gRed)"/>
+     <text x="112" y="80" text-anchor="middle" font-size="13" font-weight="800" fill="#e6c581" font-family="Poppins,Arial">32GB</text>
+     <circle cx="162" cy="80" r="5" fill="#07090d" stroke="#8b96a3"/>
+    </svg>
+   </div>
+   <div class="info">
+    <small>Storage</small><h3>Pen Drive</h3><p>USB 2.0 / 3.0 Pen Drive</p>
+    <strong>Price: WhatsApp पर पूछें</strong>
+    <a class="smallbtn" href="https://wa.me/918679474624?text=Pen%20Drive%20ki%20price%20bataye" target="_blank">Enquire Now ↗</a>
+   </div>
+  </div>
+
+  <!-- OTG CONNECTOR -->
+  <div class="product">
+   <div class="img-wrap"><div class="badge">AVAILABLE</div>
+    <svg viewBox="0 0 200 160" role="img" aria-label="OTG Connector">
+     <ellipse cx="100" cy="126" rx="76" ry="6" fill="#000" opacity=".2"/>
+     <path d="M54 82 C80 82 120 82 140 82" fill="none" stroke="#161a22" stroke-width="9" stroke-linecap="round"/>
+     <rect x="22" y="72" width="38" height="20" rx="4" fill="url(#gDark)"/>
+     <rect x="10" y="76" width="16" height="12" rx="2" fill="url(#gMetal)" stroke="#8b96a3"/>
+     <rect x="136" y="60" width="38" height="44" rx="6" fill="url(#gDark)"/>
+     <rect x="170" y="68" width="22" height="28" rx="3" fill="url(#gMetal)" stroke="#8b96a3"/>
+     <rect x="176" y="74" width="10" height="5" fill="#1b1f27"/><rect x="176" y="84" width="10" height="5" fill="#1b1f27"/>
+     <text x="155" y="88" text-anchor="middle" font-size="11" font-weight="800" fill="#e6c581" font-family="Poppins,Arial">OTG</text>
+    </svg>
+   </div>
+   <div class="info">
+    <small>Connectors</small><h3>OTG Connector</h3><p>Type-C / Micro USB OTG</p>
+    <strong>Price: WhatsApp पर पूछें</strong>
+    <a class="smallbtn" href="https://wa.me/918679474624?text=OTG%20Connector%20ki%20price%20bataye" target="_blank">Enquire Now ↗</a>
+   </div>
+  </div>
+
+  <!-- SELFIE STICK -->
+  <div class="product">
+   <div class="img-wrap"><div class="badge">AVAILABLE</div>
+    <svg viewBox="0 0 200 160" role="img" aria-label="Selfie Stick and Tripod">
+     <ellipse cx="100" cy="150" rx="22" ry="4" fill="#000" opacity=".25"/>
+     <rect x="96" y="52" width="8" height="60" fill="url(#gMetal)" stroke="#8b96a3"/>
+     <rect x="93" y="100" width="14" height="14" fill="url(#gMetal)" stroke="#8b96a3"/>
+     <rect x="90" y="108" width="20" height="42" rx="8" fill="url(#gDark)"/>
+     <rect x="93" y="118" width="14" height="4" rx="2" fill="#4cff9b"/>
+     <rect x="74" y="8" width="52" height="44" rx="8" fill="url(#gScreen)" stroke="#0a0c10" stroke-width="3"/>
+     <rect x="62" y="22" width="14" height="16" rx="4" fill="url(#gDark)"/>
+     <rect x="124" y="22" width="14" height="16" rx="4" fill="url(#gDark)"/>
+    </svg>
+   </div>
+   <div class="info">
+    <small>Camera</small><h3>Selfie Stick & Tripod</h3><p>Bluetooth Selfie Stick</p>
+    <strong>Price: WhatsApp पर पूछें</strong>
+    <a class="smallbtn" href="https://wa.me/918679474624?text=Selfie%20Stick%20Tripod%20ki%20price%20bataye" target="_blank">Enquire Now ↗</a>
+   </div>
+  </div>
+
+  <!-- RING LIGHT -->
+  <div class="product">
+   <div class="img-wrap"><div class="badge">AVAILABLE</div>
+    <svg viewBox="0 0 200 160" role="img" aria-label="Ring Light">
+     <ellipse cx="100" cy="152" rx="46" ry="4" fill="#000" opacity=".2"/>
+     <circle cx="100" cy="62" r="46" fill="none" stroke="#c3ccd7" stroke-width="16"/>
+     <circle cx="100" cy="62" r="46" fill="none" stroke="#fffbe8" stroke-width="10"/>
+     <circle cx="100" cy="62" r="46" fill="none" stroke="#fff" stroke-width="3" opacity=".9"/>
+     <rect x="91" y="48" width="18" height="28" rx="5" fill="url(#gDark)"/>
+     <rect x="97" y="112" width="6" height="30" fill="url(#gMetal)" stroke="#8b96a3"/>
+     <path d="M100 134 L66 152 M100 134 L134 152 M100 134 L100 154" stroke="#2b2f38" stroke-width="5" stroke-linecap="round"/>
+    </svg>
+   </div>
+   <div class="info">
+    <small>Camera</small><h3>Ring Light</h3><p>LED Ring Light with Stand</p>
+    <strong>Price: WhatsApp पर पूछें</strong>
+    <a class="smallbtn" href="https://wa.me/918679474624?text=Ring%20Light%20ki%20price%20bataye" target="_blank">Enquire Now ↗</a>
+   </div>
+  </div>
+
+  <!-- CAR MOBILE HOLDER -->
+  <div class="product">
+   <div class="img-wrap"><div class="badge">AVAILABLE</div>
+    <svg viewBox="0 0 200 160" role="img" aria-label="Car Mobile Holder">
+     <ellipse cx="100" cy="150" rx="52" ry="4" fill="#000" opacity=".22"/>
+     <rect x="64" y="8" width="72" height="96" rx="11" fill="url(#gScreen)" stroke="#0a0c10" stroke-width="3"/>
+     <rect x="52" y="34" width="14" height="30" rx="6" fill="url(#gDark)"/>
+     <rect x="134" y="34" width="14" height="30" rx="6" fill="url(#gDark)"/>
+     <rect x="76" y="98" width="48" height="12" rx="5" fill="url(#gDark)"/>
+     <rect x="94" y="108" width="12" height="26" fill="url(#gMetal)" stroke="#8b96a3"/>
+     <circle cx="100" cy="112" r="7" fill="url(#gGold)"/>
+     <rect x="50" y="130" width="100" height="16" rx="8" fill="url(#gDark)"/>
+    </svg>
+   </div>
+   <div class="info">
+    <small>Holder</small><h3>Car Mobile Holder</h3><p>Dashboard / AC Vent Holder</p>
+    <strong>Price: WhatsApp पर पूछें</strong>
+    <a class="smallbtn" href="https://wa.me/918679474624?text=Car%20Mobile%20Holder%20ki%20price%20bataye" target="_blank">Enquire Now ↗</a>
+   </div>
+  </div>
+
+  <!-- MOBILE BATTERY -->
+  <div class="product">
+   <div class="img-wrap"><div class="badge">AVAILABLE</div>
+    <svg viewBox="0 0 200 160" role="img" aria-label="Mobile Battery">
+     <ellipse cx="100" cy="142" rx="56" ry="5" fill="#000" opacity=".22"/>
+     <rect x="116" y="22" width="26" height="16" rx="3" fill="url(#gGold)"/>
+     <rect x="50" y="34" width="100" height="100" rx="8" fill="url(#gMetal)" stroke="#8b96a3"/>
+     <rect x="58" y="44" width="84" height="56" rx="5" fill="#1f2a44"/>
+     <text x="100" y="68" text-anchor="middle" font-size="12" font-weight="800" fill="#e6c581" font-family="Poppins,Arial">Li-ion</text>
+     <text x="100" y="86" text-anchor="middle" font-size="11" font-weight="700" fill="#ffffff" font-family="Poppins,Arial">4000 mAh</text>
+     <rect x="58" y="108" width="40" height="6" rx="3" fill="#aab3bd"/>
+     <rect x="58" y="118" width="26" height="6" rx="3" fill="#aab3bd"/>
+    </svg>
+   </div>
+   <div class="info">
+    <small>Spare Parts</small><h3>Mobile Battery</h3><p>All Brands Replacement</p>
+    <strong>Price: WhatsApp पर पूछें</strong>
+    <a class="smallbtn" href="https://wa.me/918679474624?text=Mobile%20Battery%20ki%20price%20bataye" target="_blank">Enquire Now ↗</a>
+   </div>
+  </div>
+
+  <!-- MOBILE DISPLAY -->
+  <div class="product">
+   <div class="img-wrap"><div class="badge">AVAILABLE</div>
+    <svg viewBox="0 0 200 160" role="img" aria-label="Mobile Display">
+     <ellipse cx="100" cy="150" rx="44" ry="4" fill="#000" opacity=".22"/>
+     <rect x="56" y="8" width="88" height="128" rx="13" fill="#0b0e14"/>
+     <rect x="61" y="14" width="78" height="114" rx="8" fill="url(#gWall)"/>
+     <path d="M63 16 L112 16 L63 86Z" fill="#fff" opacity=".22"/>
+     <rect x="88" y="18" width="24" height="5" rx="2.5" fill="#0b0e14"/>
+     <text x="100" y="82" text-anchor="middle" font-size="18" font-weight="700" fill="#fff" font-family="Poppins,Arial">9:41</text>
+     <rect x="90" y="134" width="20" height="18" fill="url(#gGold)"/>
+     <rect x="94" y="134" width="12" height="18" fill="#c99a43"/>
+    </svg>
+   </div>
+   <div class="info">
+    <small>Spare Parts</small><h3>Mobile Display</h3><p>Screen Replacement</p>
+    <strong>Price: WhatsApp पर पूछें</strong>
+    <a class="smallbtn" href="https://wa.me/918679474624?text=Mobile%20Display%20ki%20price%20bataye" target="_blank">Enquire Now ↗</a>
+   </div>
+  </div>
+
+  <!-- COLLAR MIC -->
+  <div class="product">
+   <div class="img-wrap"><div class="badge">AVAILABLE</div>
+    <svg viewBox="0 0 200 160" role="img" aria-label="Collar Mic">
+     <ellipse cx="100" cy="148" rx="60" ry="4" fill="#000" opacity=".2"/>
+     <path d="M52 76 C52 150 150 150 150 104" fill="none" stroke="#161a22" stroke-width="4" stroke-linecap="round"/>
+     <rect x="40" y="30" width="24" height="46" rx="12" fill="url(#gDark)"/>
+     <path d="M44 40 H60 M44 48 H60 M44 56 H60 M44 64 H60" stroke="#8b96a3" stroke-width="1.5"/>
+     <rect x="34" y="62" width="36" height="7" rx="3" fill="url(#gMetal)" stroke="#8b96a3"/>
+     <rect x="143" y="62" width="14" height="46" rx="4" fill="url(#gMetal)" stroke="#8b96a3"/>
+     <rect x="146" y="50" width="8" height="14" rx="3" fill="url(#gGold)"/>
+     <rect x="143" y="80" width="14" height="4" fill="#1b1f27"/>
+    </svg>
+   </div>
+   <div class="info">
+    <small>Audio</small><h3>Collar Mic</h3><p>Mic for Video & Reels</p>
+    <strong>Price: WhatsApp पर पूछें</strong>
+    <a class="smallbtn" href="https://wa.me/918679474624?text=Collar%20Mic%20ki%20price%20bataye" target="_blank">Enquire Now ↗</a>
+   </div>
+  </div>
+
+  <!-- RECHARGEABLE TORCH -->
+  <div class="product">
+   <div class="img-wrap"><div class="badge">AVAILABLE</div>
+    <svg viewBox="0 0 200 160" role="img" aria-label="Rechargeable Torch">
+     <ellipse cx="100" cy="150" rx="30" ry="4" fill="#000" opacity=".25"/>
+     <path d="M100 2 L72 20 L128 20Z" fill="#fff6c8" opacity=".5"/>
+     <path d="M62 24 H138 L126 58 H74Z" fill="url(#gDark)"/>
+     <ellipse cx="100" cy="24" rx="38" ry="8" fill="#fff3b0" stroke="#c9d3e3" stroke-width="2"/>
+     <rect x="76" y="56" width="48" height="90" rx="9" fill="url(#gRed)"/>
+     <rect x="80" y="60" width="8" height="82" rx="4" fill="#fff" opacity=".2"/>
+     <circle cx="100" cy="86" r="8" fill="url(#gGold)" stroke="#7a5518"/>
+     <path d="M80 112 H120 M80 120 H120 M80 128 H120" stroke="#7a1410" stroke-width="2" opacity=".6"/>
+    </svg>
+   </div>
+   <div class="info">
+    <small>Electronics</small><h3>Rechargeable Torch</h3><p>LED Torch & Emergency Light</p>
+    <strong>Price: WhatsApp पर पूछें</strong>
+    <a class="smallbtn" href="https://wa.me/918679474624?text=Rechargeable%20Torch%20ki%20price%20bataye" target="_blank">Enquire Now ↗</a>
+   </div>
+  </div>
+
+ </div>
+</section>
+
+<section id="gallery">
+ <div class="heading">
+  <small>Gallery</small>
+  <h2>Inside <span>Our Shop</span></h2>
+  <p>हमारी दुकान और रिपेयरिंग सेटअप</p>
+ </div>
+ <div class="gallery">
+  <div class="frame">
+   <img src="IMG-20261108-WA0030.jpg" alt="Shop Front">
+   <span>Shop Front</span>
+  </div>
+  <div class="frame">
+   <img src="IMG-20261108-WA0012.jpg" alt="Repairing Workbench">
+   <span>Repairing Workbench</span>
+  </div>
+  <div class="frame">
+   <img src="IMG-20261108-WA0018.jpg" alt="Repairing Tools">
+   <span>Repairing Tools</span>
+  </div>
+ </div>
+</section>
+
+<section class="contact" id="contact">
+ <div class="heading">
+  <small>Contact</small>
+  <h2>Get <span>In Touch</span></h2>
+  <p>WhatsApp बटन पर क्लिक करके हमसे संपर्क करें</p>
+ </div>
+
+ <div class="numbers">
+  <a class="number" href="https://wa.me/918679474624" target="_blank" rel="noopener noreferrer">
+   <span>WhatsApp ↗</span>
+  </a>
+
+  <a class="number" href="https://wa.me/919028803956" target="_blank" rel="noopener noreferrer">
+   <span>WhatsApp ↗</span>
+  </a>
+
+  <a class="number" href="https://wa.me/919309535790" target="_blank" rel="noopener noreferrer">
+   <span>WhatsApp ↗</span>
+  </a>
+
+  <a class="number" href="https://wa.me/918855901637" target="_blank" rel="noopener noreferrer">
+   <span>WhatsApp ↗</span>
+  </a>
+
+  <a class="number" href="https://wa.me/918679564746" target="_blank" rel="noopener noreferrer">
+   <span>WhatsApp ↗</span>
+  </a>
+ </div>
+
+ <div class="address">📍 Butibori, Maharashtra, India</div>
+</section>
+
+<footer>
+ <div class="brand">BEDHANEY <span>MOBAIL HARDWARE AND SOFTWARE REPAIR</span></div>
+ © 2026 <b>BEDHANEY MOBAIL HARDWARE AND SOFTWARE REPAIR</b>. All Rights Reserved.
+</footer>
+
+</body>
+</html>
